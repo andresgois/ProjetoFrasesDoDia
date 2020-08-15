@@ -3,9 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const { estiloText, estiloView } = Estilo;
   return (
-    <View>
-        <Text style={ Estilo.estiloText }>
+    <View style={estiloView}>
+        <Text style={ estiloText }>
           Frases do Dia
         </Text>
     </View>
@@ -14,18 +15,17 @@ export default function App() {
 
 const Estilo = StyleSheet.create({
   estiloText:{
-    fontSize: 30,
+    fontSize: 40,
     backgroundColor: '#08509B',
-    shadowColor: '#000',
-    paddingTop: 5,
-    paddingBottom: 5,
-    color: '#fff',
-    //fontStyle: "italic",
-    fontWeight: "bold",
-    textAlign:'center',
-    textDecorationLine: "underline",
-    // shadowOffset: {width:-5, height:5},
-    // shadowOpacity: 0.4,
-    // shadowRadius: 8,
-  }
+    height: 60,
+    width: 60,
+  },
+  estiloView: {
+    backgroundColor: 'skyblue',
+    height: 300,
+    // alinhamento na vertical
+    justifyContent: 'flex-end',
+    // alinhamento na horizontal
+    alignItems: 'center',
+  },
 });
