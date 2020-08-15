@@ -19,8 +19,13 @@ const Estilo = StyleSheet.create({
     shadowColor: '#000',
     paddingTop: 5,
     paddingBottom: 5,
-    shadowOffset: {width:-5, height:25},
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
+    color: '#fff',
+    //fontStyle: "italic",
+    fontWeight: "bold",
+    textAlign:'center',
+    textDecorationLine: "underline",
+    // shadowOffset: {width:-5, height:5},
+    // shadowOpacity: 0.4,
+    // shadowRadius: 8,
   }
 });
