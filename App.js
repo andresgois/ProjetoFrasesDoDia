@@ -3,40 +3,52 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const { estiloText, estiloText2, estiloView } = Estilo;
+  const { principal, cont1, cont2, cont3, abaLatEsq, abaLatDir } = Estilo;
   return (
-    <View style={estiloView}>
-        <Text style={ estiloText }>
-          A
-        </Text>
-        <Text style={ estiloText2 }>
-          B
-        </Text>
+    <View style={principal}>
+      <View style={ cont1 }>
+        <Text>   Menu       </Text>
+      </View>
+      <View style={ cont2 }>
+        <View style={ abaLatEsq}>
+          <Text>abaLatEsq</Text>
+        </View>
+        <View style={ abaLatDir}>
+          <Text>abaLatDir</Text>
+        </View>
+      </View>
+      <View style={ cont3 }>
+        <Text>   Rodape       </Text>
+      </View>
     </View>
   );
 }
 
 const Estilo = StyleSheet.create({
-  estiloText:{
-    fontSize: 40,
-    backgroundColor: '#08509B',
-    height: 60,
-    width: 60,
+  principal:{
+    flex:1,
+    backgroundColor: 'cornflowerblue',
+  }, 
+  cont1:{
+    flex:2,
+    backgroundColor: 'brown',
+  }, 
+  cont2:{
+    flex:8,
+    backgroundColor: '#ccc',
+    flexDirection: "row",
+    justifyContent:"space-around",
+  }, 
+  cont3:{
+    flex:1,
+    backgroundColor: 'orangered',
   },
-  estiloText2:{
-    fontSize: 40,
-    backgroundColor: '#2A48FA',
-    height: 60,
-    width: 60,
+  abaLatEsq:{
+    width:150,
+    backgroundColor: '#fff',
   },
-  estiloView: {
-    flex: 1,
-    backgroundColor: 'skyblue',
-    height: 300,
-    // alinhamento na vertical
-    justifyContent: 'space-between',
-    // alinhamento na horizontal
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
+  abaLatDir:{
+    width:150,
+    backgroundColor: '#fff',
+  }
 });
