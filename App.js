@@ -1,29 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
+const botaoPress = () => {
+
+}
 export default function App() {
-  const { principal,image } = Estilo;
+  const { principal, botao, textBot } = Estilo;
   return (
     <View style={principal}>
-      {/* <Image style={image} source={ require('./imgs/uvas.png') }>
-        <Text>Legenda da foto</Text>
-      </Image> */}
-      {/* <Image source={{uri: 'http://localhost:19006/img/uvas.png'}} /> */}
-      <ImageBackground style={image} source={ require('./imgs/uvas.png')}>
-        <Text>Legenda da foto</Text>
-      </ImageBackground>
+      <Image source={ require('./imgs/logo.png')} style={{width:253, height:140}} />
+      <TouchableOpacity style={botao}>
+        <Text style={textBot}>Nova frase</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const Estilo = StyleSheet.create({
   principal:{
-    padding: 40,
-  }, 
-  image:{
-    width:150,
-    height: 150,
+    backgroundColor: '#fff',
+    flex: 1,
     justifyContent: 'center',
+    alignItems: 'center'
+  }, 
+  botao:{
+    backgroundColor: '#538530',
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    marginTop: 20,
+  },
+  textBot:{
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   }
 });
